@@ -53,7 +53,7 @@ export default function PortfolioPage() {
     <main className="min-h-screen bg-black p-6 md:p-12">
       <div className="max-w-6xl mx-auto">
         <h1 className="bg-gradient-to-b from-white to-slate-500 bg-clip-text text-transparent text-5xl font-bold mb-10 text-center">
-          Portfolio Showcase
+         About
         </h1>
         
         <BentoGrid>
