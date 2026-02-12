@@ -13,7 +13,6 @@ export const useMousePosition = () => {
 
     window.addEventListener("mousemove", handleMouseMove);
 
-    // Cleanup function para hindi mag-leak ang memory
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };

@@ -1,60 +1,83 @@
 "use client";
 
+import Link from "next/link"; 
 import { BentoGrid, BentoCard } from "@/components/magicui/bento-grid";
+import Particles from "@/components/magicui/particles"; // Check mo kung tama ang path na ito
 import { 
-  BellIcon, 
-  FileTextIcon, 
   GlobeIcon, 
   InputIcon,
-  CalendarIcon 
+  IdCardIcon,
+  PersonIcon
 } from "@radix-ui/react-icons";
 
 const features = [
   {
-    Icon: FileTextIcon,
-    name: "Save your files",
-    description: "We automatically save your files as you type.",
+    Icon: PersonIcon,
+    name: "About",
+    description: "Aaron James Aquino | BSIT 2nd Year College at AMA Fairview. Passionate about building modern web applications.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
-    background: <div className="absolute inset-0 bg-black" />, // Pure black background
+    background: <div className="absolute inset-0 bg-transparent" />, 
   },
   {
     Icon: InputIcon,
-    name: "Full text search",
-    description: "Search through all your files in one place.",
+    name: "Projects",
+    description: "Currently Working this as my first Project",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
-    background: <div className="absolute inset-0 bg-black" />,
+    background: <div className="absolute inset-0 bg-transparent" />,
   },
   {
     Icon: GlobeIcon,
-    name: "Multilingual",
-    description: "Supports 100+ languages and counting.",
+    name: "Services",
+    description: "Still learning",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
-    background: <div className="absolute inset-0 bg-black" />,
+    background: <div className="absolute inset-0 bg-transparent" />,
   },
   {
-    Icon: BellIcon,
-    name: "Notifications",
-    description: "Get notified when someone shares a file.",
+    Icon: IdCardIcon,
+    name: "Contacts",
+    description: "Working on it",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
-    background: <div className="absolute inset-0 bg-black" />,
+    background: <div className="absolute inset-0 bg-transparent" />,
   },
 ];
 
 export default function PortfolioPage() {
   return (
-    <main className="min-h-screen bg-black p-6 md:p-12">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="bg-gradient-to-b from-white to-slate-500 bg-clip-text text-transparent text-5xl font-bold mb-10 text-center">
-         About
-        </h1>
+    // "relative" at "overflow-hidden" ay kailangan para sa Particles
+    <main className="relative min-h-screen bg-black p-6 md:p-12 overflow-hidden">
+      
+      {/* 1. PARTICLES - Dapat nasa z-0 at absolute */}
+      <Particles
+        className="absolute inset-0 z-0 pointer-events-none"
+        quantity={150}
+        staticity={30}
+        ease={50}
+        color="#ffffff"
+        refresh
+      />
+
+      {/* 2. CONTENT - Dapat nasa z-10 para lumutang sa ibabaw ng particles */}
+      <div className="relative z-10 max-w-6xl mx-auto">
+        
+        <div className="flex justify-start mb-10">
+          <Link 
+            href="/" 
+            className="group cursor-pointer transition-transform hover:translate-x-1 active:scale-95"
+          >
+            <h1 className="bg-gradient-to-b from-white to-slate-500 bg-clip-text text-transparent text-xl md:text-2xl font-bold text-left drop-shadow-sm">
+              Back to Home
+            </h1>
+            <div className="h-[2px] w-0 bg-white/30 transition-all duration-500 group-hover:w-full" />
+          </Link>
+        </div>
         
         <BentoGrid>
           {features.map((feature, idx) => (
