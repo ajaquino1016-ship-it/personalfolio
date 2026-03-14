@@ -18,7 +18,7 @@ export default function Home() {
 
         <Link href="/portfolio">
           <button className="px-8 py-3 rounded-full bg-transparent text-white font-medium border border-white/20 hover:bg-white/10 hover:border-white/40 transition-all duration-300 backdrop-blur-sm">
-            View Portfolio
+            Next
           </button>
         </Link>
       </div>
