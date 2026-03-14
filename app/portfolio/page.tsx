@@ -23,7 +23,7 @@ const features = [
   {
     Icon: InputIcon,
     name: "Projects",
-    description: "Currently Working this as my first Project",
+    description: "Project.	Portfolio v1: A custom-built web application showcasing my technical skills and design evolution.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
@@ -32,7 +32,7 @@ const features = [
   {
     Icon: GlobeIcon,
     name: "Services",
-    description: "Still learning",
+    description: "Web Solutions: Transforming ideas into functional websites through clean code and responsive design.",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-2",
@@ -41,7 +41,7 @@ const features = [
   {
     Icon: IdCardIcon,
     name: "Contacts",
-    description: "Working on it",
+    description: "Email: ajaquino1016@gmail.com,        Phone/Viber: 09926471362",
     href: "#",
     cta: "Learn more",
     className: "col-span-3 lg:col-span-1",
